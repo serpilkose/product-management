@@ -38,7 +38,7 @@ public class ProductController {
         return productService.update(productId,productDto);
     }
 
-    @DeleteMapping(value="/products/{productId}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(value="/products/{productId}")
     @ResponseStatus(HttpStatus.OK)
     public void deleteProduct(@PathVariable Long productId) {
         productService.delete(productId);
